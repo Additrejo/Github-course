@@ -18,6 +18,9 @@ Repositorio de aprendizaje sobre GIT & Github.
    - [Configuración Global (Nombre de usuario, Email)](#configuración-global)
 - [git init](#git-init)
 - [Ramas en git (Branches)](#ramas-en-git)
+   - [Git status](#git-status)
+- [Git add y commid](#git-add-y-commid)
+- 
 ---
 
 ## recursos
@@ -167,4 +170,23 @@ Si nos dirigimos a la carpeta veremos que se ha creado el archivo .git.
 
 ---
 
-## Ramas en GIT
+## Ramas en GIT  
+Para poder trabajar en un proyecto es necesario trabajar con diferentes ramas.
+Para nombrar una a la rama principal es necesario agregar el siguiente comando:  
+```bash  
+git branch -m main
+```
+Aparentemente no aparece un cambio pero el nombre de la rama se actualizó a main.  
+![image](https://github.com/user-attachments/assets/1af0e088-8a30-4e4b-a1fb-fd5c6fc15b70)
+
+### Git status
+Para saber si estoy en la rama principal agregar el siguiente comando:  
+```bash  
+git status
+```  
+![image](https://github.com/user-attachments/assets/96234dfc-7e50-42f0-a04f-e906fa4c721c)  
+Aparece la leyenda "On branch main" lo cual nos indica que estamos en la rama principal.
+
+---
+
+## git add y commid
