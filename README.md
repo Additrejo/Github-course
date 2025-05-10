@@ -19,8 +19,10 @@ Repositorio de aprendizaje sobre GIT & Github.
 - [git init](#git-init)
 - [Ramas en git (Branches)](#ramas-en-git)
    - [Git status](#git-status)
-- [Git add y commid](#git-add-y-commid)
-- 
+- [Git add y commit](#git-add-y-commit)
+   - [Git add](#git-add)
+   - [Git commit](#git-commit)
+- [Git log y git status](#git-log-y-git-status)
 ---
 
 ## recursos
@@ -184,9 +186,62 @@ Para saber si estoy en la rama principal agregar el siguiente comando:
 ```bash  
 git status
 ```  
-![image](https://github.com/user-attachments/assets/96234dfc-7e50-42f0-a04f-e906fa4c721c)  
+![image](https://github.com/user-attachments/assets/6c8ac580-0ed8-4d54-8076-7fbf13bb15e4)  
 Aparece la leyenda "On branch main" lo cual nos indica que estamos en la rama principal.
 
 ---
 
-## git add y commid
+## git add y commit  
+Para iniciar debemos ver el estado de nuestro proyecto agregado el siguiente comando:
+```bash  
+git status
+```
+![image](https://github.com/user-attachments/assets/6f73c98f-fc47-45fa-be66-cfd11daf3494)  
+
+### Git add
+
+Veremos que estamos en la rama principal y tenemos un archivo de prueba marcado en rojo.
+Al momento ese archivo aun no está agregado a GIT, así que lo agregaremos con el comando:  
+
+```bash  
+git add helloworld.py
+```
+
+para verificar que se agregó correctamente consultamos de nuevo con [git status](#git-status):  
+```bash  
+git status
+```
+![image](https://github.com/user-attachments/assets/20d73e72-d9bb-4c6e-849c-ea30291aeae3)  
+Podremos darnos cuenta que ya está en verde, esto significa que ya el stage ya lo tomó en cuenta pero aun es necesario hacer commit.
+
+### Git commit
+
+Agregamos el siguiente comando:  
+```bash  
+git commit
+```
+Enseguida nos aparecerá la siguiente ventana:  
+![image](https://github.com/user-attachments/assets/e3840145-155d-4727-bc11-3d9886c6b3fd)  
+
+Es necesario agregar un nombre en la parte superior del mensaje:  
+![image](https://github.com/user-attachments/assets/e69b1a5f-0353-4185-a709-e487db7da006)  
+
+Existe otra forma de hacerlo con el siguiente comando.
+```bash  
+git commit -m "[Mensaje al crear el commit]"
+```
+En este caso usaremos el siguiente:  
+```bash  
+git commit -m "Este es mi primer commit"
+```
+Dandonos como resultado lo siguiente:  
+![image](https://github.com/user-attachments/assets/9cfd0e1f-e197-4bec-9d13-5d5f05568eb9)  
+Si analizamos podremos ver la rama en la que se encuentra, su identificador unico, así como los archivos que se han modificado.  
+
+Al revisar de nuva cuenta con [git status](#git-status) podremos ver lo siguiente:  
+
+![image](https://github.com/user-attachments/assets/451b3fd4-30fc-4e43-ba3d-4d890f3f2d26)
+
+---
+
+## git log y git status
