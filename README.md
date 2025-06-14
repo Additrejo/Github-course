@@ -244,4 +244,45 @@ Al revisar de nuva cuenta con [git status](#git-status) podremos ver lo siguient
 
 ---
 
-## git log y git status
+## git log y git status.
+Para verificar si el commit se ha realizado ocupamos el comando:
+```bash  
+git log
+```
+![image](https://github.com/user-attachments/assets/e8a47499-ebdc-4f5c-a6fa-f5a991188a0f)  
+En el podemos ver el  hash, su ubicación, autor, correo y fecha, ademas del mensaje que dejamos en el commit.  
+
+Al crear otro archivo por ejemplo un Helloworld2.py y agregamos el comando [git status](#git-status) podremos ver como el nuevo archivo está en letras rojas con el mensaje sobre poder pasar el arhivo de forma local al stage.  
+![image](https://github.com/user-attachments/assets/ad07086c-ef7b-4364-9306-23cedc5f1fa6)
+
+
+para añadirlo es encesario agregar el comando  [git add](#git-add) + el nombre del archivo.
+```bash  
+git add helloworld2.py
+```
+Aparentemente no hará nada, lo que tenemos que hacer es hacer commit con el comando [git commit](#git-commit).
+```bash  
+git commit -m "Este es mi segundo commit"
+```
+![image](https://github.com/user-attachments/assets/c35bcb03-9ebc-47b4-9910-efcdd1105df7)  
+Nos apareccerá que un arhichivo ha sido modificado y se ha insertado.  
+```bash  
+git log
+```
+Para comprobar agregamos nuevamente el comando  el comando [git log](#git-log)  
+
+
+![image](https://github.com/user-attachments/assets/f11a9894-6a2d-49ab-90f7-d5e726eeb8c7)  
+apareciendo los dos archivos con sus respetivos datos mencionados anteriormente.
+
+Si hacemos una modificación y agregamos de nuevo el comando [git status(#git-status)] 
+```bash  
+git status
+```
+podremos darnos cuenta los cambios que hemos hecho al código y que NO hemos guardado.  
+![image](https://github.com/user-attachments/assets/62629063-84bb-412d-b337-cf49417c571c)  
+
+Si editamos un segundo archivo y agregamos de nuevo el comando podemos ver como ahora aparece el segundo archivo sin guardar.  
+![image](https://github.com/user-attachments/assets/8474ba88-2008-4c3d-b9ea-a37691e634bf)
+
+
