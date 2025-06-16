@@ -2,27 +2,39 @@
 Repositorio de aprendizaje sobre GIT & Github.
 
 
-## 📑 Índice
+## 📑 Índice.
+#### ¿Qué es Git y GitHub?.
+- [¿Qué es Git?](#¿-qué-es-git-?)
+  - [Características principales](#-características-principales)
+  - [🛠Usos comunes](#️-usos-comunes)
+- [¿Qué es GitHub?](#-qué-es-github)
+  - [ Funciones destacadas](#-funciones-destacadas)
+  - [Relación entre Git y GitHub](#-relación-entre-git-y-github)
 
+
+#### Instalación y configuración GIT.
 - [Recursos](#recursos)
 - [Downloads](#downloads)
 - [Instalacion GIT](#instalacion-git)
    - [Instalación por descarga de archivo](#instalación-por-descarga-de-archivo)
    - [Instalación en consola](#instalación-en-consola)
    - [Comprobar instalación de GIT](#comprobar-instalación-de-git)
+##### Comandos GIT.
 - [Comandos básicos](#comandos-básicos)
    - [git --version](#git---version)
-   - [git -help](#git---help)
-- [Comandos básicos en la Terminal Linux, CMD, PowerShell, Git Bash](#comandos-básicos-en-la-terminal-linux-cmd-powershell-git-bash)
+   - [git --help](#git---help)
+- [Comandos básicos de navegación en la Terminal Linux, CMD, PowerShell, Git Bash](#comandos-básicos-en-la-terminal-linux-cmd-powershell-git-bash)
+##### Configuración GIT.
 - [Configuración de GIT](#configuración-de-git)
    - [Configuración Global (Nombre de usuario, Email)](#configuración-global)
+##### Iniciando con GIT.
 - [git init](#git-init)
 - [Ramas en git (Branches)](#ramas-en-git)
    - [Git status](#git-status)
 - [Git add y commit](#git-add-y-commit)
    - [Git add](#git-add)
    - [Git commit](#git-commit)
-- [Git log y git status](#git-log-y-git-status)
+- [Git log](#git-log)
 ---
 
 ## recursos
@@ -38,6 +50,44 @@ Repositorio de aprendizaje sobre GIT & Github.
  * [Windows](https://git-scm.com/downloads/win)
  * [Linux](https://git-scm.com/downloads/linux)
  * [macOS](https://git-scm.com/downloads/mac)
+
+---
+
+# 📘 ¿Qué es Git y GitHub?
+
+## 🔧 Git
+
+**Git** es un sistema de control de versiones distribuido creado por **Linus Torvalds** en 2005. Permite llevar un historial completo de los cambios realizados en un proyecto, facilitando el trabajo colaborativo y el seguimiento de versiones.
+
+### ✅ Características principales:
+- Controla el historial de versiones del código.
+- Facilita la colaboración entre varios desarrolladores.
+- Permite trabajar con ramas (branches) para desarrollo paralelo.
+- Es rápido, seguro y eficiente.
+
+### 🛠️ Usos comunes:
+- Seguimiento de cambios en proyectos de software.
+- Reversión de errores a versiones anteriores.
+- Coordinación en equipos de desarrollo.
+
+---
+
+## 🌐 GitHub
+
+**GitHub** es una plataforma en la nube para alojar repositorios Git. Proporciona herramientas para colaborar, revisar código, gestionar proyectos y automatizar procesos.
+
+### 🚀 Funciones destacadas:
+- Hospedaje de repositorios públicos y privados.
+- Pull requests para revisión y fusión de código.
+- Issues para gestión de tareas y bugs.
+- Forks para crear copias independientes de proyectos.
+- Integración con CI/CD (GitHub Actions).
+
+### 🤝 Relación entre Git y GitHub:
+- **Git** se usa localmente para gestionar versiones de código.
+- **GitHub** permite almacenar ese código en línea y trabajar en equipo.
+
+> 🔗 Git es la herramienta. GitHub es la plataforma donde compartes tu trabajo con el mundo.
 
 ---
 
@@ -80,7 +130,7 @@ Estos son algunos comandos en terminal básicos para cualquiere terminal compati
 
 
 ### *git --version*  
-_Este comando sirve para la ver la versión que tenemos instalada en nuestra PC._
+_"El comando git --version sirve para mostrar la versión actual de Git que tienes instalada en tu sistema."_
 ```bash
 git --version
 ```  
@@ -91,7 +141,7 @@ git -v
 ![image](https://github.com/user-attachments/assets/182253f9-a29d-4843-a489-fe970eca827d)
 
 ### *git --help* 
-_Este comando sirve para visualizar todos los comandos y su descripción disponibles en GIT._
+_"El comando git --help sirve para mostrar la ayuda general de Git o la documentación de un subcomando específico"._
 ```bash  
 git --help
 ```
@@ -244,7 +294,7 @@ Al revisar de nuva cuenta con [git status](#git-status) podremos ver lo siguient
 
 ---
 
-## git log y git status.
+## git log.
 Para verificar si el commit se ha realizado ocupamos el comando:
 ```bash  
 git log
@@ -275,11 +325,11 @@ Para comprobar agregamos nuevamente el comando  el comando [git log](#git-log)
 ![image](https://github.com/user-attachments/assets/f11a9894-6a2d-49ab-90f7-d5e726eeb8c7)  
 apareciendo los dos archivos con sus respetivos datos mencionados anteriormente.
 
-Si hacemos una modificación y agregamos de nuevo el comando [git status(#git-status)] 
+Si modificamos el archivo y agregamos de nuevo el comando [git status](#git-status) 
 ```bash  
 git status
 ```
-podremos darnos cuenta los cambios que hemos hecho al código y que NO hemos guardado.  
+podremos darnos cuenta que de nueva cuenta aparece en rojo, esto significa que el archivo ha sido modificado y no ha sido actualizado..  
 ![image](https://github.com/user-attachments/assets/62629063-84bb-412d-b337-cf49417c571c)  
 
 Si editamos un segundo archivo y agregamos de nuevo el comando podemos ver como ahora aparece el segundo archivo sin guardar.  
