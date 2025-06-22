@@ -203,6 +203,8 @@ Con esto tendremos las configuraciones necesarias para usar GIT.
 ---
 
 ## git init
+._El comando git init se utiliza para inicializar un nuevo repositorio de Git. Es uno de los primeros comandos que se ejecutan cuando comienzas un nuevo proyecto con Git._
+
 
 Dirigirse a la carpeta raiz del directo a tráves de CMD y escribir el siguiente comando:  
 
@@ -217,13 +219,20 @@ C:\Users\addi_\Documents\GIT>git init
 A continuación nos mostrará un mensaje que se ha creado un repositorio vacío.  
 ![image](https://github.com/user-attachments/assets/a4509bc4-e84f-4f40-ab0d-5ad37d33b7a4)  
 
+_Git crea un subdirectorio oculto llamado .git dentro del directorio actual. Este subdirectorio contiene todos los archivos necesarios del repositorio — incluyendo historial, configuración y metadatos — que permiten a Git rastrear los cambios en los archivos del proyecto._
+
 Si nos dirigimos a la carpeta veremos que se ha creado el archivo .git.  
 ![image](https://github.com/user-attachments/assets/26d87983-b104-415c-bf3c-b3651c69c83d)
+
+_¿Cuándo usar git init?
+Cuando estás empezando un nuevo proyecto y quieres usar Git para control de versiones.
+Cuando tienes un proyecto existente que no está bajo control de versiones y quieres empezar a usar Git._
 
 ---
 
 ## Ramas en GIT  
-Para poder trabajar en un proyecto es necesario trabajar con diferentes ramas.
+_Una rama es una línea de desarrollo independiente. Te permite trabajar en nuevas características, correcciones o ideas sin afectar el código principal (generalmente llamado main o master)._
+
 Para nombrar una a la rama principal es necesario agregar el siguiente comando:  
 ```bash  
 git branch -m main
@@ -231,24 +240,29 @@ git branch -m main
 Aparentemente no aparece un cambio pero el nombre de la rama se actualizó a main.  
 ![image](https://github.com/user-attachments/assets/1af0e088-8a30-4e4b-a1fb-fd5c6fc15b70)
 
-### Git status
-Para saber si estoy en la rama principal agregar el siguiente comando:  
+## Git status
+_El comando git status se usa para ver el estado actual del repositorio, es decir, te muestra qué archivos:  
+**- Han sido modificados.**  
+**- Están listos para ser guardados (staged).**  
+**- No están preparados para el commit.**  
+**- Son nuevos y no están siendo rastreados por Git (untracked)**_  
+**- Saber en que rama me encuentro.**
+
+*Crear un archivo prueba en la carpeta dónde se creó el [git init](#git-init).
+
+Escribirmos el siguiente comando en la dirección de la carpeta.
 ```bash  
 git status
 ```  
 ![image](https://github.com/user-attachments/assets/6c8ac580-0ed8-4d54-8076-7fbf13bb15e4)  
-Aparece la leyenda "On branch main" lo cual nos indica que estamos en la rama principal.
+Aparece la leyenda "On branch main" lo cual nos indica que estamos en la rama principal, así como el documento que hemos creado. 
 
 ---
 
 ## git add y commit  
-Para iniciar debemos ver el estado de nuestro proyecto agregado el siguiente comando:
-```bash  
-git status
-```
-![image](https://github.com/user-attachments/assets/6f73c98f-fc47-45fa-be66-cfd11daf3494)  
 
 ### Git add
+_El comando git add se utiliza para agregar archivos al área de preparación (staging area) en Git. Es un paso previo antes de guardar los cambios de forma definitiva con git commit._
 
 Veremos que estamos en la rama principal y tenemos un archivo de prueba marcado en rojo.
 Al momento ese archivo aun no está agregado a GIT, así que lo agregaremos con el comando:  
