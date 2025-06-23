@@ -19,7 +19,7 @@ Repositorio de aprendizaje sobre GIT & Github.
    - [Instalación por descarga de archivo](#instalación-por-descarga-de-archivo)
    - [Instalación en consola](#instalación-en-consola)
    - [Comprobar instalación de GIT](#comprobar-instalación-de-git)
-##### Comandos GIT.
+##### Comandos básicos GIT.
 - [Comandos básicos](#comandos-básicos)
    - [git --version](#git---version)
    - [git --help](#git---help)
@@ -35,6 +35,7 @@ Repositorio de aprendizaje sobre GIT & Github.
    - [Git add](#git-add)
    - [Git commit](#git-commit)
 - [Git log](#git-log)
+- [Git Checkout y Reset](#git-checkout-y-reset)
 ---
 
 ## recursos
@@ -203,8 +204,10 @@ Con esto tendremos las configuraciones necesarias para usar GIT.
 ---
 
 ## git init
-._El comando git init se utiliza para inicializar un nuevo repositorio de Git. Es uno de los primeros comandos que se ejecutan cuando comienzas un nuevo proyecto con Git._
+_El comando git init se utiliza para inicializar un nuevo repositorio de Git.  
+Es uno de los primeros comandos que se ejecutan cuando comienzas un nuevo proyecto con Git._
 
+Crear una carpeta en donde vamos alojar nuestro repositorio (Carpeta raiz).
 
 Dirigirse a la carpeta raiz del directo a tráves de CMD y escribir el siguiente comando:  
 
@@ -224,8 +227,8 @@ _Git crea un subdirectorio oculto llamado .git dentro del directorio actual. Est
 Si nos dirigimos a la carpeta veremos que se ha creado el archivo .git.  
 ![image](https://github.com/user-attachments/assets/26d87983-b104-415c-bf3c-b3651c69c83d)
 
-_¿Cuándo usar git init?
-Cuando estás empezando un nuevo proyecto y quieres usar Git para control de versiones.
+❓ _¿Cuándo usar git init?  
+Cuando estás empezando un nuevo proyecto y quieres usar Git para control de versiones.  
 Cuando tienes un proyecto existente que no está bajo control de versiones y quieres empezar a usar Git._
 
 ---
@@ -278,9 +281,16 @@ git status
 ![image](https://github.com/user-attachments/assets/20d73e72-d9bb-4c6e-849c-ea30291aeae3)  
 Podremos darnos cuenta que ya está en verde, esto significa que ya el stage ya lo tomó en cuenta pero aun es necesario hacer commit.
 
-### Git commit
+### Git commit  
+_El comando git commit se utiliza para guardar los cambios preparados (staged) en el repositorio. Es uno de los pasos más importantes en el flujo de trabajo con Git, ya que crea un punto en el historial del proyecto con un mensaje que describe los cambios realizados._  
 
-Agregamos el siguiente comando:  
+❓ ¿Qué hace exactamente?
+git commit:  
+***-Toma los archivos agregados con git add***   
+***-Los guarda permanentemente en el historial del repositorio***  
+***-Permite añadir un mensaje descriptivo con la opción -m.***  
+
+Para poder hacer commit agregamos el siguiente comando:  
 ```bash  
 git commit
 ```
@@ -302,13 +312,24 @@ Dandonos como resultado lo siguiente:
 ![image](https://github.com/user-attachments/assets/9cfd0e1f-e197-4bec-9d13-5d5f05568eb9)  
 Si analizamos podremos ver la rama en la que se encuentra, su identificador unico, así como los archivos que se han modificado.  
 
-Al revisar de nuva cuenta con [git status](#git-status) podremos ver lo siguiente:  
+Al revisar de nueva cuenta con [git status](#git-status) podremos ver lo siguiente:  
 
 ![image](https://github.com/user-attachments/assets/451b3fd4-30fc-4e43-ba3d-4d890f3f2d26)
 
+De forma gráfica el status es este:  
+![image](https://github.com/user-attachments/assets/c96b49ac-9a59-4442-8a84-3fb78ccc9e44)
+
+
 ---
 
-## git log.
+## git log.  
+_El comando git log se utiliza para ver el historial de commits de un repositorio. Muestra una lista de todos los commits realizados, en orden cronológico inverso (el más reciente aparece primero)._
+
+ **-Hash (identificador único del commit)**  
+**-Autor**  
+**-Fecha**  
+**-Mensaje del commit**  
+
 Para verificar si el commit se ha realizado ocupamos el comando:
 ```bash  
 git log
@@ -316,6 +337,7 @@ git log
 ![image](https://github.com/user-attachments/assets/e8a47499-ebdc-4f5c-a6fa-f5a991188a0f)  
 En el podemos ver el  hash, su ubicación, autor, correo y fecha, ademas del mensaje que dejamos en el commit.  
 
+#### Creando otro archivo.
 Al crear otro archivo por ejemplo un Helloworld2.py y agregamos el comando [git status](#git-status) podremos ver como el nuevo archivo está en letras rojas con el mensaje sobre poder pasar el arhivo de forma local al stage.  
 ![image](https://github.com/user-attachments/assets/ad07086c-ef7b-4364-9306-23cedc5f1fa6)
 
@@ -339,6 +361,7 @@ Para comprobar agregamos nuevamente el comando  el comando [git log](#git-log)
 ![image](https://github.com/user-attachments/assets/f11a9894-6a2d-49ab-90f7-d5e726eeb8c7)  
 apareciendo los dos archivos con sus respetivos datos mencionados anteriormente.
 
+#### 📝 ***NOTA**
 Si modificamos el archivo y agregamos de nuevo el comando [git status](#git-status) 
 ```bash  
 git status
@@ -347,6 +370,11 @@ podremos darnos cuenta que de nueva cuenta aparece en rojo, esto significa que e
 ![image](https://github.com/user-attachments/assets/62629063-84bb-412d-b337-cf49417c571c)  
 
 Si editamos un segundo archivo y agregamos de nuevo el comando podemos ver como ahora aparece el segundo archivo sin guardar.  
-![image](https://github.com/user-attachments/assets/8474ba88-2008-4c3d-b9ea-a37691e634bf)
+![image](https://github.com/user-attachments/assets/8474ba88-2008-4c3d-b9ea-a37691e634bf)  
 
+De forma gráfica el status se encuentra así.  
+![image](https://github.com/user-attachments/assets/9540f6ac-1b53-4fcf-8037-54ad6b8886e7)
 
+---
+
+## Git checkout y Reset.  
